@@ -1,0 +1,168 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f8fafc;
+  color: #1f2937;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+  animation: slideIn 1.2s ease-out;
+}
+
+.hero p {
+  color: #4b5563;
+  animation: fadeIn 2s ease-in;
+}
+
+.buttons {
+  margin-top: 20px;
+  animation: fadeInUp 1.5s ease-in;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* BUTTONS */
+.buttons a {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 18px;
+  background: #2563eb;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.buttons a:hover {
+  background: #1d4ed8;
+}
+
+/* SECTIONS */
+.section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+/* SKILLS */
+.skills {
+  text-align: center;
+}
+
+.skills span {
+  display: inline-block;
+  background: #e0f2fe;
+  color: #0369a1;
+  padding: 8px 12px;
+  margin: 5px;
+  border-radius: 20px;
+}
+
+/* CARDS */
+.card {
+  background: white;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+}
+
+.card a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+/* CONTACT */
+.contact-btn {
+  background: #16a34a;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #ffffff;
+  border-top: 1px solid #e5e7eb;
+  margin-top: 40px;
+}
+
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  width: 55px;
+  height: 55px;
+  background: #25D366;
+  color: white;
+  font-size: 24px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+  text-decoration: none;
+
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+
+  transition: transform 0.3s;
+}
+
+.whatsapp:hover {
+  transform: scale(1.1);
+}
