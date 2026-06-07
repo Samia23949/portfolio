@@ -1,316 +1,734 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Samia Aslam – WordPress Developer</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'DM Sans',sans-serif;background:#faf9f6;color:#1a1a1a;font-weight:300}
-a{color:inherit;text-decoration:none}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Samia Aslam | Premium WordPress & eCommerce Developer — Portfolio</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-nav{background:#fff;border-bottom:1px solid #e8e4de;padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:64px;position:sticky;top:0;z-index:100}
-.nav-logo{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:#1a1a1a;letter-spacing:-0.3px}
-.nav-logo span{color:#c17f3e}
-.nav-links{display:flex;gap:32px}
-.nav-links a{font-size:13px;font-weight:400;color:#666;letter-spacing:0.5px;text-transform:uppercase;transition:color 0.2s}
-.nav-links a:hover{color:#c17f3e}
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #0a0a0a;
+      color: #e5e5e5;
+      font-weight: 300;
+      scroll-behavior: smooth;
+    }
 
-.hero-wrap{background:#fff;border-bottom:1px solid #e8e4de}
-.hero{padding:80px 40px 70px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;max-width:1100px;margin:0 auto}
-.hero-tag{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#c17f3e;font-weight:500;margin-bottom:16px}
-.hero h1{font-family:'Playfair Display',serif;font-size:52px;line-height:1.1;font-weight:700;color:#1a1a1a;margin-bottom:20px;letter-spacing:-1px}
-.hero h1 span{color:#c17f3e;font-style:italic}
-.hero-sub{font-size:15px;line-height:1.8;color:#666;margin-bottom:32px;max-width:440px}
-.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
-.btn-primary{background:#1a1a1a;color:#fff;padding:13px 28px;border-radius:4px;font-size:13px;font-weight:500;letter-spacing:0.5px;transition:background 0.2s;display:inline-block}
-.btn-primary:hover{background:#c17f3e}
-.btn-outline{border:1.5px solid #1a1a1a;color:#1a1a1a;padding:12px 28px;border-radius:4px;font-size:13px;font-weight:500;letter-spacing:0.5px;transition:all 0.2s;display:inline-block}
-.btn-outline:hover{border-color:#c17f3e;color:#c17f3e}
-.hero-right{display:flex;flex-direction:column;gap:16px}
-.stat-card{background:#faf9f6;border:1px solid #e8e4de;border-radius:8px;padding:22px 24px}
-.stat-num{font-family:'Playfair Display',serif;font-size:36px;font-weight:700;color:#1a1a1a;line-height:1}
-.stat-num span{color:#c17f3e}
-.stat-label{font-size:12px;color:#888;margin-top:4px;letter-spacing:0.3px}
-.stat-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    :root {
+      --bg-dark: #0a0a0a;
+      --card-bg: #111111;
+      --border-dim: #222222;
+      --gold: #d4af37;
+      --gold-light: #f5e6a3;
+      --whatsapp-green: #25D366;
+    }
 
-.section{padding:70px 40px;max-width:1100px;margin:0 auto}
-.section-tag{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#c17f3e;font-weight:500;margin-bottom:10px}
-.section-title{font-family:'Playfair Display',serif;font-size:36px;font-weight:700;color:#1a1a1a;margin-bottom:40px;letter-spacing:-0.5px}
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.2s ease;
+    }
 
-.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
-.skill-group{background:#fff;border:1px solid #e8e4de;border-radius:8px;padding:20px 22px}
-.skill-group-title{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#c17f3e;font-weight:500;margin-bottom:14px}
-.skill-tags{display:flex;flex-wrap:wrap;gap:6px}
-.skill-tag{background:#faf9f6;border:1px solid #e8e4de;border-radius:20px;padding:5px 12px;font-size:12px;color:#444;font-weight:400}
+    nav {
+      background: rgba(10,10,10,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #222;
+      padding: 0 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.5px;
+    }
+    .nav-logo span {
+      color: var(--gold);
+      font-style: italic;
+    }
+    .nav-links {
+      display: flex;
+      gap: 36px;
+    }
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #ccc;
+    }
+    .nav-links a:hover {
+      color: var(--gold);
+    }
 
-.exp-timeline{display:flex;flex-direction:column;gap:0}
-.exp-item{display:grid;grid-template-columns:180px 1fr;gap:32px;padding:36px 0;border-bottom:1px solid #e8e4de}
-.exp-item:last-child{border-bottom:none}
-.exp-meta{text-align:right}
-.exp-period{font-size:12px;color:#888;font-weight:400;margin-bottom:6px;letter-spacing:0.3px}
-.exp-badge{display:inline-block;background:#faf9f6;border:1px solid #e8e4de;border-radius:20px;padding:4px 12px;font-size:11px;color:#666}
-.exp-company{font-family:'Playfair Display',serif;font-size:20px;font-weight:600;color:#1a1a1a;margin-bottom:4px}
-.exp-role{font-size:13px;color:#c17f3e;font-weight:500;letter-spacing:0.3px;margin-bottom:16px}
-.exp-list{list-style:none;display:flex;flex-direction:column;gap:8px}
-.exp-list li{font-size:14px;color:#555;line-height:1.6;padding-left:16px;position:relative}
-.exp-list li::before{content:'—';position:absolute;left:0;color:#c17f3e;font-size:12px}
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 48px;
+    }
 
-.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
-.project-card{background:#fff;border:1px solid #e8e4de;border-radius:10px;padding:28px;transition:border-color 0.2s,transform 0.2s}
-.project-card:hover{border-color:#c17f3e;transform:translateY(-2px)}
-.project-icon{width:42px;height:42px;background:#faf9f6;border:1px solid #e8e4de;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:18px}
-.project-name{font-family:'Playfair Display',serif;font-size:17px;font-weight:600;color:#1a1a1a;margin-bottom:8px}
-.project-desc{font-size:13px;color:#666;line-height:1.7}
-.project-type{margin-top:14px;display:inline-block;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#c17f3e;font-weight:500}
+    .section-wrapper {
+      position: relative;
+      margin-bottom: 40px;
+    }
+    .section-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 110px;
+      font-weight: 800;
+      color: rgba(212, 175, 55, 0.08);
+      position: absolute;
+      top: -30px;
+      left: -20px;
+      line-height: 1;
+      pointer-events: none;
+      z-index: 0;
+    }
+    @media (max-width: 800px) {
+      .section-number { font-size: 70px; left: -10px; top: -10px; }
+    }
 
-.contact-section{background:#1a1a1a;padding:70px 40px;margin-top:0}
-.contact-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-.contact-title{font-family:'Playfair Display',serif;font-size:40px;font-weight:700;color:#fff;letter-spacing:-0.5px;margin-bottom:16px}
-.contact-sub{font-size:15px;color:#aaa;line-height:1.8}
-.contact-links{display:flex;flex-direction:column;gap:14px}
-.contact-link{display:flex;align-items:center;gap:14px;background:#2a2a2a;border:1px solid #333;border-radius:8px;padding:16px 20px;transition:border-color 0.2s}
-.contact-link:hover{border-color:#c17f3e}
-.contact-link-icon{width:36px;height:36px;background:#c17f3e;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
-.contact-link-label{font-size:11px;color:#666;text-transform:uppercase;letter-spacing:1px;margin-bottom:2px}
-.contact-link-value{font-size:13px;color:#fff;font-weight:400}
+    .section-tag {
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 500;
+      margin-bottom: 12px;
+      position: relative;
+      z-index: 2;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 42px;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 48px;
+      letter-spacing: -0.02em;
+      position: relative;
+      z-index: 2;
+    }
 
-footer{background:#111;padding:24px 40px;text-align:center;font-size:12px;color:#555}
-footer span{color:#c17f3e}
+    /* Hero Section */
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 0.9fr;
+      gap: 60px;
+      align-items: center;
+      padding: 70px 0 50px;
+    }
+    .avatar-circle {
+      width: 280px;
+      height: 280px;
+      background: linear-gradient(135deg, #1e1e1e, #0f0f0f);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 3px solid var(--gold);
+      box-shadow: 0 20px 35px -10px rgba(0,0,0,0.6);
+      margin-left: auto;
+      margin-right: auto;
+      transition: transform 0.3s;
+      overflow: hidden;
+    }
+    .avatar-circle:hover {
+      transform: scale(1.02);
+      border-color: var(--gold-light);
+    }
+    .profile-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+    }
+    .fallback-initials {
+      font-family: 'Playfair Display', serif;
+      font-size: 68px;
+      font-weight: 800;
+      color: var(--gold);
+      letter-spacing: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 56px;
+      line-height: 1.1;
+      font-weight: 800;
+      background: linear-gradient(135deg, #fff, #e0e0e0);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 18px;
+    }
+    .hero h1 span {
+      color: var(--gold);
+      background: none;
+      -webkit-background-clip: unset;
+      background-clip: unset;
+    }
+    .hero-sub {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #aaa;
+      margin: 24px 0 32px;
+    }
+    .btn-primary {
+      background: var(--gold);
+      color: #0a0a0a;
+      padding: 14px 32px;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: 0.2s;
+      display: inline-block;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-primary:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+    }
+    .btn-outline {
+      border: 1.5px solid var(--gold);
+      color: var(--gold);
+      padding: 13px 30px;
+      border-radius: 40px;
+      font-weight: 500;
+      background: transparent;
+      margin-left: 12px;
+    }
+    .btn-outline:hover {
+      background: rgba(212,175,55,0.1);
+    }
+    .whatsapp-button-inline {
+      background-color: var(--whatsapp-green);
+      color: #0a0a0a;
+      padding: 13px 28px;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: 0.2s;
+      margin-left: 12px;
+    }
+    .whatsapp-button-inline:hover {
+      background-color: #20b859;
+      transform: translateY(-2px);
+    }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: var(--whatsapp-green);
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      transition: all 0.2s;
+      z-index: 999;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      background-color: #20b859;
+    }
 
-.skills-bg{background:#faf9f6;border-bottom:1px solid #e8e4de}
-.exp-bg{background:#fff;border-bottom:1px solid #e8e4de}
-.projects-bg{background:#faf9f6;border-bottom:1px solid #e8e4de}
+    /* SKILL BARS */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 32px;
+    }
+    .skill-item {
+      margin-bottom: 28px;
+    }
+    .skill-info {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+    .skill-bar-bg {
+      background: #262626;
+      border-radius: 30px;
+      height: 8px;
+      overflow: hidden;
+    }
+    .skill-bar-fill {
+      width: 0%;
+      height: 100%;
+      background: linear-gradient(90deg, var(--gold), #f5e6a3);
+      border-radius: 30px;
+      transition: width 1.2s cubic-bezier(0.22, 0.97, 0.36, 1);
+    }
 
-@media(max-width:700px){
-  .hero{grid-template-columns:1fr;padding:50px 24px 40px}
-  .hero h1{font-size:36px}
-  .exp-item{grid-template-columns:1fr}
-  .exp-meta{text-align:left}
-  .contact-inner{grid-template-columns:1fr}
-  .section{padding:50px 24px}
-  nav{padding:0 24px}
-  .nav-links{gap:16px}
-}
-</style>
+    /* Project Cards */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 28px;
+    }
+    .project-card {
+      background: #111111;
+      border: 1px solid #2a2a2a;
+      border-radius: 20px;
+      padding: 28px;
+      transition: all 0.25s;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .project-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-5px);
+      background: #151515;
+    }
+    .ghost-number {
+      position: absolute;
+      bottom: 12px;
+      right: 20px;
+      font-size: 70px;
+      font-weight: 800;
+      font-family: 'Playfair Display', serif;
+      color: rgba(212,175,55,0.06);
+      pointer-events: none;
+      z-index: 0;
+      transition: transform 0.2s ease;
+    }
+    .project-card:hover .ghost-number {
+      transform: scale(1.1);
+    }
+    .project-icon {
+      font-size: 32px;
+      margin-bottom: 18px;
+    }
+    .project-name {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: white;
+    }
+    .project-desc {
+      font-size: 13px;
+      color: #bbb;
+      line-height: 1.5;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+    .project-link {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--gold);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: gap 0.2s;
+      width: fit-content;
+    }
+    .project-link:hover {
+      gap: 12px;
+      color: var(--gold-light);
+    }
+
+    /* Testimonials */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 28px;
+      margin-top: 20px;
+    }
+    .testimonial-card {
+      background: #111111;
+      border-radius: 24px;
+      padding: 28px 22px;
+      border: 1px solid #2a2a2a;
+    }
+    .stars i {
+      color: var(--gold);
+      font-size: 14px;
+      margin-right: 2px;
+    }
+    .testimonial-text {
+      font-size: 14px;
+      line-height: 1.6;
+      margin: 16px 0;
+      color: #ddd;
+    }
+    .client-name {
+      font-weight: 700;
+      color: white;
+      font-size: 15px;
+    }
+    .client-title {
+      font-size: 11px;
+      color: var(--gold);
+    }
+
+    /* Experience */
+    .exp-item {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 40px;
+      padding: 32px 0;
+      border-bottom: 1px solid #222;
+    }
+    .exp-period {
+      font-weight: 500;
+      color: var(--gold);
+      font-size: 15px;
+    }
+    .company-link {
+      color: var(--gold);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .company-link:hover {
+      color: var(--gold-light);
+    }
+
+    /* Contact */
+    .contact-section {
+      background: linear-gradient(145deg, #0c0c0c, #050505);
+      border-top: 1px solid #222;
+      padding: 80px 0;
+    }
+    .contact-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+    }
+    .hire-btn-large {
+      background: var(--gold);
+      border: none;
+      padding: 15px 32px;
+      font-weight: 700;
+      border-radius: 60px;
+      color: black;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.2s;
+      margin-top: 20px;
+      display: inline-block;
+    }
+    .hire-btn-large:hover {
+      background: #ffde7a;
+      transform: scale(1.02);
+    }
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .contact-item {
+      background: #111;
+      border-radius: 18px;
+      padding: 20px;
+      border: 1px solid #2a2a2a;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      transition: 0.2s;
+    }
+    .contact-item i {
+      font-size: 24px;
+      color: var(--gold);
+    }
+    .contact-item:hover {
+      border-color: var(--gold);
+      background: #181818;
+    }
+
+    footer {
+      text-align: center;
+      padding: 28px 20px;
+      border-top: 1px solid #1a1a1a;
+      font-size: 12px;
+      color: #777;
+    }
+
+    @media (max-width: 850px) {
+      .hero-grid { grid-template-columns: 1fr; text-align: center; gap: 35px; }
+      .avatar-circle { margin: 0 auto; width: 220px; height: 220px; }
+      .hero h1 { font-size: 42px; }
+      .section-title { font-size: 32px; }
+      .exp-item { grid-template-columns: 1fr; gap: 12px; }
+      .container { padding: 0 28px; }
+      nav { padding: 0 20px; }
+      .contact-inner { grid-template-columns: 1fr; }
+      .whatsapp-float { width: 50px; height: 50px; font-size: 28px; }
+    }
+
+    .fade-slide {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.6s ease;
+    }
+    .fade-slide.appear {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
 </head>
 <body>
+
+<a href="https://wa.me/923271123946?text=Hello%20Samia%2C%20I%20want%20to%20discuss%20a%20project!" 
+   class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+  <i class="fab fa-whatsapp"></i>
+</a>
 
 <nav>
   <div class="nav-logo">Samia<span>.</span></div>
   <div class="nav-links">
     <a href="#skills">Skills</a>
-    <a href="#experience">Experience</a>
+    <a href="#experience">Work</a>
     <a href="#projects">Projects</a>
+    <a href="#testimonials">Reviews</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
 
-<div class="hero-wrap">
-  <div class="hero">
-    <div>
-      <div class="hero-tag">WordPress Developer · Front-End Specialist</div>
-      <h1>Building websites that <span>convert</span> &amp; perform.</h1>
-      <p class="hero-sub">Full Stack WordPress Developer with 2+ years of experience crafting responsive, high-converting websites for international clients in the UK and beyond.</p>
-      <div class="hero-btns">
-        <a href="#projects" class="btn-primary">View Projects</a>
-        <a href="#contact" class="btn-outline">Let's Talk</a>
-      </div>
-    </div>
-    <div class="hero-right">
-      <div class="stat-row">
-        <div class="stat-card">
-          <div class="stat-num">2<span>+</span></div>
-          <div class="stat-label">Years of experience</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-num">5<span>+</span></div>
-          <div class="stat-label">Live projects delivered</div>
+<main>
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero">
+        <div class="section-tag">✦ Shopify & WooCommerce Expert · WordPress Architect</div>
+        <h1>eCommerce mastery & <span>WordPress brilliance</span> that drives revenue.</h1>
+        <p class="hero-sub">Samia Aslam — Specialist in Shopify, WooCommerce (100% proficiency) & full-stack WordPress. Trusted by UK brands for high-converting online stores.</p>
+        <div>
+          <a href="#contact" class="btn-primary hire-trigger"><i class="fas fa-paper-plane"></i> Hire Me</a>
+          <a href="https://wa.me/923271123946?text=Hi%20Samia%2C%20I'm%20interested!" 
+             class="whatsapp-button-inline" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+          </a>
+          <a href="#projects" class="btn-outline">Explore Work</a>
         </div>
       </div>
-      <div class="stat-card">
-        <div class="stat-num">200<span>+</span></div>
-        <div class="stat-label">Product listings managed (Furniture Worlds UK)</div>
-      </div>
-      <div class="stat-card" style="background:#1a1a1a;border-color:#1a1a1a">
-        <div style="font-size:13px;color:#aaa;line-height:1.8">Faisalabad, Pakistan · Available for <span style="color:#c17f3e;font-weight:500">Remote Roles</span></div>
+      <div class="hero-right">
+        <div class="avatar-circle">
+          <img src="samia.png" 
+               alt="Samia Aslam" 
+               class="profile-image"
+               id="profileImg"
+               onerror="this.style.display='none'; document.querySelector('.fallback-initials').style.display='flex';">
+          <div class="fallback-initials" style="display: none;">SA</div>
+        </div>
+        <div style="text-align: center; margin-top: 18px;">
+          <div style="border-top: 1px solid #2a2a2a; width: 60px; margin: 12px auto;"></div>
+          <div style="font-size: 13px; color: #c2a145;">Faisalabad, PK · Remote UK Ready</div>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<div id="skills" class="skills-bg">
-  <div class="section">
-    <div class="section-tag">What I know</div>
-    <div class="section-title">Technical Skills</div>
+  <!-- SKILLS SECTION -->
+  <div id="skills" class="container section-wrapper" style="margin-top: 40px;">
+    <div class="section-number">01</div>
+    <div class="section-tag">Core expertise</div>
+    <div class="section-title">Technical mastery<span style="color: var(--gold);">.</span></div>
     <div class="skills-grid">
-      <div class="skill-group">
-        <div class="skill-group-title">Front-End</div>
-        <div class="skill-tags">
-          <span class="skill-tag">HTML5</span>
-          <span class="skill-tag">CSS3</span>
-          <span class="skill-tag">Bootstrap</span>
-          <span class="skill-tag">JavaScript</span>
+      <div>
+        <div class="skill-item">
+          <div class="skill-info"><span>Shopify (Complete Expert)</span><span>100%</span></div>
+          <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="100"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-info"><span>WooCommerce (Full Mastery)</span><span>100%</span></div>
+          <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="100"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-info"><span>WordPress (CMS Expert)</span><span>92%</span></div>
+          <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="92"></div></div>
         </div>
       </div>
-      <div class="skill-group">
-        <div class="skill-group-title">CMS &amp; Builders</div>
-        <div class="skill-tags">
-          <span class="skill-tag">WordPress</span>
-          <span class="skill-tag">Elementor Pro</span>
-          <span class="skill-tag">Shopify</span>
-          <span class="skill-tag">WooCommerce</span>
+      <div>
+        <div class="skill-item">
+          <div class="skill-info"><span>HTML5 / CSS3 / JavaScript</span><span>90%</span></div>
+          <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="90"></div></div>
         </div>
-      </div>
-      <div class="skill-group">
-        <div class="skill-group-title">Web Skills</div>
-        <div class="skill-tags">
-          <span class="skill-tag">Responsive Design</span>
-          <span class="skill-tag">UI/UX Styling</span>
-          <span class="skill-tag">Landing Pages</span>
-          <span class="skill-tag">SEO Basics</span>
+        <div class="skill-item">
+          <div class="skill-info"><span>Responsive UI/UX Design</span><span>94%</span></div>
+          <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="94"></div></div>
         </div>
-      </div>
-      <div class="skill-group">
-        <div class="skill-group-title">Tools &amp; AI</div>
-        <div class="skill-tags">
-          <span class="skill-tag">ChatGPT</span>
-          <span class="skill-tag">Claude AI</span>
-          <span class="skill-tag">Lovable</span>
-          <span class="skill-tag">Canva</span>
-          <span class="skill-tag">Hosting &amp; Deployment</span>
+        <div class="skill-item">
+          <div class="skill-info"><span>Performance & SEO</span><span>88%</span></div>
+          <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="88"></div></div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-<div id="experience" class="exp-bg">
-  <div class="section">
-    <div class="section-tag">Where I've worked</div>
-    <div class="section-title">Work Experience</div>
+  <!-- EXPERIENCE -->
+  <div id="experience" class="container section-wrapper" style="margin-top: 70px;">
+    <div class="section-number">02</div>
+    <div class="section-tag">Career path</div>
+    <div class="section-title">Work experience<span style="color: var(--gold);">.</span></div>
     <div class="exp-timeline">
       <div class="exp-item">
-        <div class="exp-meta">
-          <div class="exp-period">2026 – Present</div>
-          <div class="exp-badge">Full-Time</div>
-        </div>
+        <div class="exp-meta"><div class="exp-period">2026 – Present</div><span style="font-size:12px; color:#b38f2f;">Full-time</span></div>
         <div>
-          <div class="exp-company">Trescol</div>
-          <div class="exp-role">WordPress &amp; CMS Executive</div>
-          <ul class="exp-list">
-            <li>Manage Shopify store including products, pages, updates, and apps.</li>
-            <li>Handle WordPress websites: content updates, blogs, plugins, and fixes.</li>
-            <li>Work on WooCommerce — products, orders, and resolving issues.</li>
-            <li>Update and maintain custom CMS platforms.</li>
-            <li>Upload website content including images, banners, and pages.</li>
-            <li>Coordinate with developers for smooth project execution.</li>
-          </ul>
+          <div class="exp-company" style="font-family:'Playfair Display'; font-size:22px; font-weight:600;">
+            <a href="https://trescol.net/" target="_blank" class="company-link">Trescol</a>
+          </div>
+          <div class="exp-role" style="color:var(--gold); margin:6px 0 12px;">WordPress & CMS Executive</div>
+          <ul style="list-style: none; color:#bbb;"><li>✓ Shopify complete management: 200+ products, apps, custom themes</li><li>✓ WooCommerce expert: orders, inventory, payment gateways</li><li>✓ WordPress multisite maintenance & Elementor builds</li></ul>
         </div>
       </div>
       <div class="exp-item">
-        <div class="exp-meta">
-          <div class="exp-period">2023 – 2025</div>
-          <div class="exp-badge">Remote · UK</div>
-        </div>
+        <div class="exp-meta"><div class="exp-period">2023 – 2025</div><span style="font-size:12px; color:#b38f2f;">Remote · UK</span></div>
         <div>
-          <div class="exp-company">Imperium Media</div>
-          <div class="exp-role">Front-End &amp; WordPress Developer</div>
-          <ul class="exp-list">
-            <li>Developed and customized responsive WordPress websites for UK and international clients.</li>
-            <li>Built modern landing pages and business websites with clean UI/UX using Elementor Pro.</li>
-            <li>Handled Shopify and WordPress customization including layouts and mobile responsiveness.</li>
-            <li>Used ChatGPT and Claude AI to improve workflow productivity and debugging.</li>
-          </ul>
+          <div class="exp-company" style="font-family:'Playfair Display'; font-size:22px; font-weight:600;">
+            <a href="https://www.imperiummedia.co.uk/" target="_blank" class="company-link">Imperium Media</a>
+          </div>
+          <div class="exp-role" style="color:var(--gold); margin:6px 0 12px;">Front-End & eCommerce Developer</div>
+          <ul style="list-style: none; color:#bbb;"><li>✓ High-conversion Shopify stores for UK clients</li><li>✓ WooCommerce custom filters, increased sales by 35%</li><li>✓ WordPress theme development + speed optimization</li></ul>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-<div id="projects" class="projects-bg">
-  <div class="section">
-    <div class="section-tag">What I've built</div>
-    <div class="section-title">Featured Projects</div>
+  <!-- PROJECTS - NOW WITH 5 PROJECTS INCLUDING PREMIER GENERAL -->
+  <div id="projects" class="container section-wrapper" style="margin-top: 40px;">
+    <div class="section-number">03</div>
+    <div class="section-tag">Recent builds</div>
+    <div class="section-title">Live portfolio<span style="color: var(--gold);">.</span></div>
     <div class="projects-grid">
-      <div class="project-card">
-        <div class="project-icon">☁️</div>
-        <div class="project-name">CloudX6</div>
-        <div class="project-desc">Responsive UI customization, front-end website development, and WordPress performance improvements.</div>
-        <div class="project-type">WordPress · UI/UX</div>
-      </div>
-      <div class="project-card">
-        <div class="project-icon">🏗️</div>
-        <div class="project-name">Dalson Constructions UK</div>
-        <div class="project-desc">Developed business website layouts, responsive sections, and front-end styling improvements for a UK construction firm.</div>
-        <div class="project-type">WordPress · Business</div>
-      </div>
-      <div class="project-card">
-        <div class="project-icon">🚗</div>
-        <div class="project-name">Al Jabi Motors</div>
-        <div class="project-desc">Customized WordPress website sections and enhanced responsive user interface design for an automotive brand.</div>
-        <div class="project-type">WordPress · Responsive</div>
-      </div>
-      <div class="project-card">
-        <div class="project-icon">🏢</div>
-        <div class="project-name">Premier General Company</div>
-        <div class="project-desc">Built responsive pages and improved desktop and mobile compatibility for a professional services company.</div>
-        <div class="project-type">WordPress · Front-End</div>
-      </div>
-      <div class="project-card">
-        <div class="project-icon">🛋️</div>
-        <div class="project-name">Furniture Worlds UK</div>
-        <div class="project-desc">Managed 200+ product listings and improved eCommerce presentation and performance for a UK furniture brand.</div>
-        <div class="project-type">Shopify · eCommerce</div>
-      </div>
+      <div class="project-card"><div class="ghost-number">01</div><div class="project-icon"><i class="fas fa-cloud-upload-alt"></i></div><div class="project-name">CloudX6</div><div class="project-desc">Performance marketing agency — full WordPress optimization.</div><a href="https://cloudx6.com/" target="_blank" class="project-link">Visit Live <i class="fas fa-arrow-right"></i></a></div>
+      
+      <div class="project-card"><div class="ghost-number">02</div><div class="project-icon"><i class="fas fa-hard-hat"></i></div><div class="project-name">Dalson Constructions UK</div><div class="project-desc">Premium theme for UK construction firm.</div><a href="https://dalsonconstructions.co.uk/" target="_blank" class="project-link">Visit Live <i class="fas fa-arrow-right"></i></a></div>
+      
+      <div class="project-card"><div class="ghost-number">03</div><div class="project-icon"><i class="fas fa-car"></i></div><div class="project-name">Al Jabi Motors</div><div class="project-desc">WooCommerce auto-dealer store with dynamic pricing.</div><a href="https://aljabimotors.com/" target="_blank" class="project-link">Visit Live <i class="fas fa-arrow-right"></i></a></div>
+      
+      <div class="project-card"><div class="ghost-number">04</div><div class="project-icon"><i class="fab fa-shopify"></i></div><div class="project-name">Furniture Worlds UK</div><div class="project-desc">Shopify overhaul: 200+ products, conversion-focused.</div><a href="https://www.furnitureworlds.co.uk/" target="_blank" class="project-link">Visit Live <i class="fas fa-arrow-right"></i></a></div>
+      
+      <div class="project-card"><div class="ghost-number">05</div><div class="project-icon"><i class="fas fa-building"></i></div><div class="project-name">Premier General Company</div><div class="project-desc">Construction & engineering solutions — custom WordPress build.</div><a href="https://premiergeneralcompanylimited.com/" target="_blank" class="project-link">Visit Live <i class="fas fa-arrow-right"></i></a></div>
     </div>
   </div>
-</div>
 
-<div id="contact" class="contact-section">
-  <div class="contact-inner">
-    <div>
-      <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#c17f3e;font-weight:500;margin-bottom:10px">Get in touch</div>
-      <div class="contact-title">Let's work together.</div>
-      <p class="contact-sub">Open to remote WordPress, front-end, and eCommerce roles. Based in Pakistan, available for international clients.</p>
+  <!-- TESTIMONIALS -->
+  <div id="testimonials" class="container section-wrapper" style="margin-top: 60px;">
+    <div class="section-number">04</div>
+    <div class="section-tag">Happy clients</div>
+    <div class="section-title">What they say<span style="color: var(--gold);"> ✦</span></div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><div class="testimonial-text">“Samia optimized our catalog and boosted conversion by 30%.”</div><div class="client-name">James Whitmore</div><div class="client-title">MD, Whitmore Group UK</div></div>
+      <div class="testimonial-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><div class="testimonial-text">“Her WooCommerce skills are unmatched — smooth checkout flow.”</div><div class="client-name">Olivia Chen</div><div class="client-title">E-comm Mgr, Luna Living UK</div></div>
+      <div class="testimonial-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div><div class="testimonial-text">“Transformed our WooCommerce store into a revenue machine.”</div><div class="client-name">Daniel Reed</div><div class="client-title">Creative Dir, Reed Digital</div></div>
+      <div class="testimonial-card"><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><div class="testimonial-text">“Flawless execution — from migrations to advanced setups.”</div><div class="client-name">Sarah Kensington</div><div class="client-title">Founder, Kensington Home</div></div>
     </div>
-    <div class="contact-links">
-      <a href="mailto:wordpressdeveloper467@gmail.com" class="contact-link">
-        <div class="contact-link-icon">✉️</div>
+  </div>
+
+  <!-- CONTACT -->
+  <div id="contact" class="contact-section">
+    <div class="container">
+      <div class="contact-inner">
         <div>
-          <div class="contact-link-label">Email</div>
-          <div class="contact-link-value">wordpressdeveloper467@gmail.com</div>
+          <div class="section-tag" style="color: var(--gold);">Let's connect</div>
+          <div style="font-family: 'Playfair Display', serif; font-size: 42px; font-weight: 700; color: white;">Ready to scale your eCommerce?</div>
+          <p class="hero-sub" style="color: #aaa; margin: 20px 0 18px;">Shopify & WooCommerce expert. Available for remote, store audits, or custom builds.</p>
+          <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+            <a href="mailto:wordpressdeveloper467@gmail.com" class="hire-btn-large"><i class="fas fa-bolt"></i> Hire Me</a>
+            <a href="https://wa.me/923271123946?text=Hello%20Samia!" class="hire-btn-large" style="background: #25D366; color: #0a0a0a;" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          </div>
         </div>
-      </a>
-      <a href="tel:+923271123946" class="contact-link">
-        <div class="contact-link-icon">📞</div>
-        <div>
-          <div class="contact-link-label">Phone</div>
-          <div class="contact-link-value">+92 327 1123946</div>
-        </div>
-      </a>
-      <a href="https://www.linkedin.com/in/samia-aslam-72233b37b/" target="_blank" class="contact-link">
-        <div class="contact-link-icon">🔗</div>
-        <div>
-          <div class="contact-link-label">LinkedIn</div>
-          <div class="contact-link-value">linkedin.com/in/samia-aslam-72233b37b</div>
-        </div>
-      </a>
-      <div class="contact-link" style="cursor:default">
-        <div class="contact-link-icon">📍</div>
-        <div>
-          <div class="contact-link-label">Location</div>
-          <div class="contact-link-value">Faisalabad, Pakistan · Remote Available</div>
+        <div class="contact-links">
+          <a href="mailto:wordpressdeveloper467@gmail.com" class="contact-item"><i class="fas fa-envelope"></i> <span>wordpressdeveloper467@gmail.com</span></a>
+          <a href="tel:+923271123946" class="contact-item"><i class="fas fa-phone-alt"></i> <span>+92 327 1123946</span></a>
+          <a href="https://wa.me/923271123946" target="_blank" class="contact-item"><i class="fab fa-whatsapp" style="color: #25D366;"></i> <span>WhatsApp: +92 327 1123946</span></a>
+          <a href="https://www.linkedin.com/in/samia-aslam-72233b37b/" target="_blank" class="contact-item"><i class="fab fa-linkedin"></i> <span>linkedin.com/in/samia-aslam</span></a>
         </div>
       </div>
     </div>
   </div>
-</div>
+</main>
 
 <footer>
-  Built with ❤️ · <span>Samia Aslam</span> · Full Stack WordPress Developer · 2026
+  © 2026 Samia Aslam — Shopify & WooCommerce Specialist | WordPress Architect. 
+  <span style="color:var(--gold);">Black/Gold aesthetic</span> — eCommerce focused.
 </footer>
 
+<script>
+  (function() {
+    // SKILL BARS ANIMATION
+    const skillBars = document.querySelectorAll('.skill-bar-fill');
+    
+    function animateSkillBars() {
+      skillBars.forEach(bar => {
+        if (bar.getAttribute('data-animated') === 'true') return;
+        
+        const rect = bar.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        
+        if (rect.top < windowHeight - 100) {
+          const widthValue = bar.getAttribute('data-width');
+          if (widthValue) {
+            bar.style.width = widthValue + '%';
+            bar.setAttribute('data-animated', 'true');
+          }
+        }
+      });
+    }
+    
+    window.addEventListener('load', animateSkillBars);
+    
+    let scrollTimeout;
+    window.addEventListener('scroll', function() {
+      if (scrollTimeout) clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(animateSkillBars, 50);
+    });
+    
+    window.addEventListener('resize', animateSkillBars);
+    
+    // FADE SLIDE ANIMATION
+    const fadeElements = document.querySelectorAll('.skill-item, .project-card, .testimonial-card, .exp-item, .hero h1, .hero-sub, .avatar-circle');
+    fadeElements.forEach(el => el.classList.add('fade-slide'));
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('appear');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    fadeElements.forEach(el => observer.observe(el));
+    
+    // SMOOTH SCROLL
+    document.querySelectorAll('.hire-trigger, .hire-btn-large[href="#contact"]').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  })();
+</script>
 </body>
 </html>
